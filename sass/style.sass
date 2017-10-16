@@ -139,16 +139,23 @@ body
 		@extend .my-icon
 
 #testimonials
-	div:first-child
+		
+		padding: 0
+	.carousel-indicators
+		left: 70%
+		bottom: 15%
+	.slide-photo
 		height: 500px
 		padding: 0
 		img
 			+img-responsive()
 			object-position: right
 
-	div:last-child
+	.quotes
+		padding: 5%
 		background-color: #533549
 		color: $white
+		height: 500px
 		blockquote
 			border: none
 			font-size: 36px

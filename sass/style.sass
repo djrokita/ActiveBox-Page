@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Cardo:400,400i|Open+Sans:300,400,700|Raleway:300,400,500,600,700')
+
+=font-italic()
+	font-family: 'Cardo', serif
+	font-style: italic
+
+$font-header: 'Open Sans', sans-serif
+$font-main: 'Raleway', sans-serif
+
+$white: #fff
+$red: #e74545
+
+
+
+=header-bigger()
+	font-size: 22px
+	color: rgb(45, 48, 51)
+
+=header-m()
+	font-weight: bold
+	text-transform: uppercase
+	margin-top: 20px
+	margin-bottom: 20px
+	color: rgb(45, 48, 51)
+
+=img-responsive()
+	width: 100%
+	height: 100%
+	object-fit: cover
+	margin: 0
+
+body
+	font-family: $font-main
+	color: rgb(108, 114, 121)
+	/*font-size: 14px*/
+
+.jumbotron
+	background-image: url('../images/build/hero.png')
+	color: $white
+	padding-top: 0
+	min-height: 100vh
+	/*box-sizing: border-box*/
+	.navbar
+		min-height: 100px
+		padding-top: 25px
+	.navbar-default
+		background-color: transparent
+		border: none
+		box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15)
+		.navbar-nav > li > a
+			color: $white
+	header 
+		margin-top: 100px
+		max-width: 1000px
+		h1
+			font-family: $font-header
+			font-size: 65px
+			font-weight: bold
+		p
+			font-size: 22px
+			padding-top: 20px
+			margin-bottom: 70px
+		.btn-lg
+			width: 200px
+			height: 46px
+
+.btn
+	border-radius: 2px
+	font-size: 13px
+	font-weight: 600
+
+.btn-enter
+	background-color: $red
+	color: $white
+
+.my-icon
+	color: #c5c9cb
+	border: 1px solid #e7ebed
+	display: inline-block
+	height: 40px
+	width: 40px
+	text-align: center
+	font-size: 16px
+	padding-top: 12px
+	margin-right: 3px
+
+.fa:last-child
+	margin-right: 0
+
+#features
+	max-height: 750px
+	/*padding-top: 5%*/
+	padding-bottom: 5%
+	.card
+		padding: 3%
+		img
+			margin-bottom: 10px
+			margin-top: 10px
+
+		h5
+			+header-m()
+
+#works
+	.photo
+		height: 350px
+		padding: 0
+		position: relative
+		border: 1px solid lightgray
+		.layer
+			position: absolute
+			top: 0
+			color: $white
+			background-color: $red
+			height: 100%
+			width: 100%
+			opacity: 0
+			padding-top: 40%
+			transition: all .5s
+			&:hover
+				opacity: .8
+			h5
+				+header-m()
+				margin-bottom: 5px
+
+		img
+			+img-responsive()
+#team
+	padding-top: 5%
+	padding-bottom: 5%
+	h3
+		+header-bigger()
+	h6
+		font-size: 12px
+		text-transform: uppercase
+		color: $red
+		margin-top: 15px
+		margin-bottom: 20px
+	.fa
+		@extend .my-icon
+
+#testimonials
+	div:first-child
+		height: 500px
+		padding: 0
+		img
+			+img-responsive()
+			object-position: right
+
+	div:last-child
+		background-color: #533549
+		color: $white
+		blockquote
+			border: none
+			font-size: 36px
+			+font-italic()
+			cite
+				font-size: 13px
+				font-family: $font-main
+				font-style: normal
+				font-weight: bold
+
+#download
+	height: 350px
+	padding-top: 8%
+	h2
+		+header-bigger()
+		font-size: 28px 
+	h5
+			+header-m()
+			font-size: 13px
+			margin-top: 10px
+	.btn-lg
+		width: 280px
+		height: 46px
+		margin-top: 20px
+
+.contact
+	height: 250px
+	background-color: #393d63
+	padding-top: 5%
+	h5
+		+header-m
+		color: $white
+	
+	address
+
+	.fa
+		@extend .my-icon
+	p
+		font-weight: 300
+
+
+footer
+	background-color: #313353
+	padding-top: 2%
+	padding-bottom: 2%
+	color: rgb(128, 128, 128)
+	p
+		margin-bottom: 0
+	.fa
+		color: $red
+	.author
+		color: $white
+
+

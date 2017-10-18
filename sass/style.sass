@@ -1,29 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Cardo:400,400i|Open+Sans:300,400,700|Raleway:300,400,500,600,700')
 
-=font-italic()
-	font-family: 'Cardo', serif
-	font-style: italic
-
+$font-qoute: 'Cardo', serif    
 $font-header: 'Open Sans', sans-serif
 $font-main: 'Raleway', sans-serif
 
 $white: #fff
 $red: #e74545
+$gray: rgb(108, 114, 121)
+$headerColor: rgb(45, 48, 51) 
 
+//*
+//	outline: 1px solid red
 
+=margin-top-bottom($top, $bottom)
+	margin-top: $top
+	margin-bottom: $bottom
 
-=header-bigger()
-	font-size: 22px
-	color: rgb(45, 48, 51)
+=padding-top-bottom($top, $bottom)
+	padding-top: $top
+	padding-bottom: $bottom
 
-=header-m()
+=headers($size)
+	+margin-top-bottom(20px, 20px)
 	font-weight: bold
 	text-transform: uppercase
-	margin-top: 20px
-	margin-bottom: 20px
-	color: rgb(45, 48, 51)
+	color: $headerColor
+	font-size: $size
 
-=img-responsive()
+.my-responsive
 	width: 100%
 	height: 100%
 	object-fit: cover
@@ -31,15 +35,16 @@ $red: #e74545
 
 body
 	font-family: $font-main
-	color: rgb(108, 114, 121)
-	/*font-size: 14px*/
+	color: $gray
+	padding-left: 5px
+	padding-right: 5px
 
 .jumbotron
 	background-image: url('../images/build/hero.png')
 	color: $white
 	padding-top: 0
-	min-height: 100vh
-	/*box-sizing: border-box*/
+	height: 100vh
+	margin-bottom: 0
 	.navbar
 		min-height: 100px
 		padding-top: 25px
@@ -49,17 +54,21 @@ body
 		box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15)
 		.navbar-nav > li > a
 			color: $white
+			&:hover
+				color: $red
+			&:focus
+				color: $red
+
 	header 
-		margin-top: 100px
+		margin-top: 15%
 		max-width: 1000px
 		h1
 			font-family: $font-header
-			font-size: 65px
+			font-size: 30px
 			font-weight: bold
 		p
-			font-size: 22px
-			padding-top: 20px
-			margin-bottom: 70px
+			font-size: 16px
+			+margin-top-bottom(20px, 70px)
 		.btn-lg
 			width: 200px
 			height: 46px
@@ -88,17 +97,14 @@ body
 	margin-right: 0
 
 #features
-	max-height: 750px
-	/*padding-top: 5%*/
-	padding-bottom: 5%
+	min-height: 550px
+	+padding-top-bottom(5%, 5%)
 	.card
 		padding: 3%
 		img
-			margin-bottom: 10px
-			margin-top: 10px
-
+			+margin-top-bottom(10px, 10px)
 		h5
-			+header-m()
+			+headers(14px)
 
 #works
 	.photo
@@ -114,52 +120,68 @@ body
 			height: 100%
 			width: 100%
 			opacity: 0
-			padding-top: 40%
-			transition: all .5s
+			padding-top: 130px
+			transition: all .7s
 			&:hover
-				opacity: .8
+				opacity: .9
 			h5
-				+header-m()
+				+headers(14px)
 				margin-bottom: 5px
+				color: $white
 
 		img
-			+img-responsive()
+			@extend .my-responsive
 #team
-	padding-top: 5%
-	padding-bottom: 5%
+	.person
+		+margin-top-bottom(5%, 5%)
+	.photo
+		height: 270px
+		width: 270px
+		img
+			@extend .my-responsive
 	h3
-		+header-bigger()
+		font-size: 22px
+		color: rgb(45, 48, 51)
 	h6
 		font-size: 12px
 		text-transform: uppercase
 		color: $red
-		margin-top: 15px
-		margin-bottom: 20px
+		+margin-top-bottom(15px, 20px)
 	.fa
 		@extend .my-icon
+		&:hover
+			color: $gray
+			border-color: $gray
 
 #testimonials
-		
-		padding: 0
-	.carousel-indicators
-		left: 70%
-		bottom: 15%
+	.carousel-indicators li
+		margin-right: 5px
 	.slide-photo
-		height: 500px
+		height: 300px
 		padding: 0
 		img
-			+img-responsive()
-			object-position: right
+			@extend .my-responsive
 
+	.carousel-caption
+		background-color: rgba(0, 0, 0, 0.3)
+		p
+			font-size: 22px
+			font-family: $font-qoute
+			font-style: italic
+		h5
+			+headers(13px)
+			font-family: $font-main
+			color: $white
 	.quotes
+		display: none
 		padding: 5%
 		background-color: #533549
 		color: $white
-		height: 500px
+		height: 100%
 		blockquote
 			border: none
-			font-size: 36px
-			+font-italic()
+			font-family: $font-qoute
+			font-style: italic
 			cite
 				font-size: 13px
 				font-family: $font-main
@@ -167,40 +189,38 @@ body
 				font-weight: bold
 
 #download
-	height: 350px
-	padding-top: 8%
-	h2
-		+header-bigger()
-		font-size: 28px 
+	max-height: 350px
+	+padding-top-bottom(10%, 10%)
+	h3
+		color: $headerColor
+		margin: 0
 	h5
-			+header-m()
-			font-size: 13px
-			margin-top: 10px
+		+headers(13px)
+		margin-top: 2%
 	.btn-lg
 		width: 280px
 		height: 46px
 		margin-top: 20px
 
 .contact
-	height: 250px
 	background-color: #393d63
-	padding-top: 5%
+	+padding-top-bottom(3%, 5%)
 	h5
-		+header-m
-		color: $white
-	
-	address
-
+		+headers(14px)
+		color: $white	
 	.fa
 		@extend .my-icon
+		border-radius: 2px
+		border-width: 2px
+		&:hover
+			color: $red
+			border-color: $red
 	p
 		font-weight: 300
 
-
 footer
 	background-color: #313353
-	padding-top: 2%
-	padding-bottom: 2%
+	+padding-top-bottom(2%, 2%)
 	color: rgb(128, 128, 128)
 	p
 		margin-bottom: 0
@@ -209,4 +229,72 @@ footer
 	.author
 		color: $white
 
+@media (min-width: 768px)
+	body
+		padding-left: 0
+		padding-right: 0
 
+	.jumbotron
+		header
+			h1
+				font-size: 40px
+			p
+				font-size: 22px
+
+	#team
+		padding-top: 5%
+		.text-center
+			text-align: left
+		.person
+			margin-top: 0
+			.photo
+				height: 300px
+				width: 100%
+
+	#testimonials
+		.slide-photo
+			height: 400px
+		.quotes
+			blockquote
+				font-size: 24px
+
+@media (min-width: 992px)
+	.jumbotron
+		height: 700px
+		header
+			h1
+				font-size: 65px
+	#team
+		padding-bottom: 5%
+		.person
+			margin: 0
+	#testimonials
+		.slide-photo
+			height: 500px
+		.carousel-indicators
+			left: 75%
+			bottom: 15%
+		.carousel-caption
+			display: none
+		.quotes
+			height: 500px
+			display: block
+			blockquote
+				font-size: 28px
+	
+@media (min-width: 1200px)
+
+	#testimonials
+		.slide-photo
+			height: 600px
+		.carousel-indicators
+			bottom: 15%
+		.quotes
+			height: 600px
+			blockquote
+				font-size: 36px
+	
+	#download
+		+padding-top-bottom(5%, 5%)
+		h2
+			font-size: 28px

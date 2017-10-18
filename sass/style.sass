@@ -36,14 +36,14 @@ $headerColor: rgb(45, 48, 51)
 body
 	font-family: $font-main
 	color: $gray
-	padding-left: 5px
-	padding-right: 5px
 
 .jumbotron
 	background-image: url('../images/build/hero.png')
+	//background-image: url('https://i.imgur.com/nsLJLAx.jpg')
 	color: $white
 	padding-top: 0
 	height: 100vh
+	min-height: 550px
 	margin-bottom: 0
 	.navbar
 		min-height: 100px
@@ -196,7 +196,7 @@ body
 		margin: 0
 	h5
 		+headers(13px)
-		margin-top: 2%
+		margin-top: 4%
 	.btn-lg
 		width: 280px
 		height: 46px
@@ -230,10 +230,6 @@ footer
 		color: $white
 
 @media (min-width: 768px)
-	body
-		padding-left: 0
-		padding-right: 0
-
 	.jumbotron
 		header
 			h1
@@ -281,6 +277,9 @@ footer
 			display: block
 			blockquote
 				font-size: 28px
+	#download
+		h5
+			margin-top: 2%
 	
 @media (min-width: 1200px)
 

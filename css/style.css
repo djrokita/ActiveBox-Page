@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css?family=Cardo:400,400i|Open+Sans:300,400,700|Raleway:300,400,500,600,700");
+.my-responsive, #works .photo img, #team .photo img, #testimonials .slide-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: #6c7279; }
+
+.jumbotron {
+  background-image: url("../images/build/hero.png");
+  color: #fff;
+  padding-top: 0;
+  height: 100vh;
+  min-height: 550px;
+  margin-bottom: 0; }
+  .jumbotron .navbar {
+    min-height: 100px;
+    padding-top: 25px; }
+  .jumbotron .navbar-default {
+    background-color: transparent;
+    border: none;
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15); }
+    .jumbotron .navbar-default .navbar-nav > li > a {
+      color: #fff; }
+      .jumbotron .navbar-default .navbar-nav > li > a:hover {
+        color: #e74545; }
+      .jumbotron .navbar-default .navbar-nav > li > a:focus {
+        color: #e74545; }
+  .jumbotron header {
+    margin-top: 15%;
+    max-width: 1000px; }
+    .jumbotron header h1 {
+      font-family: "Open Sans", sans-serif;
+      font-size: 30px;
+      font-weight: bold; }
+    .jumbotron header p {
+      font-size: 16px;
+      margin-top: 20px;
+      margin-bottom: 70px; }
+    .jumbotron header .btn-lg {
+      width: 200px;
+      height: 46px; }
+
+.btn {
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 600; }
+
+.btn-enter {
+  background-color: #e74545;
+  color: #fff; }
+
+.my-icon, #team .fa, .contact .fa {
+  color: #c5c9cb;
+  border: 1px solid #e7ebed;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  font-size: 16px;
+  padding-top: 12px;
+  margin-right: 3px; }
+
+.fa:last-child {
+  margin-right: 0; }
+
+#features {
+  min-height: 550px;
+  padding-top: 5%;
+  padding-bottom: 5%; }
+  #features .card {
+    padding: 3%; }
+    #features .card img {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    #features .card h5 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #2d3033;
+      font-size: 14px; }
+
+#works .photo {
+  height: 350px;
+  padding: 0;
+  position: relative;
+  border: 1px solid lightgray; }
+  #works .photo .layer {
+    position: absolute;
+    top: 0;
+    color: #fff;
+    background-color: #e74545;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    padding-top: 130px;
+    transition: all .7s; }
+    #works .photo .layer:hover {
+      opacity: .9; }
+    #works .photo .layer h5 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #2d3033;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #fff; }
+
+#team .person {
+  margin-top: 5%;
+  margin-bottom: 5%; }
+
+#team .photo {
+  height: 270px;
+  width: 270px; }
+
+#team h3 {
+  font-size: 22px;
+  color: #2d3033; }
+
+#team h6 {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #e74545;
+  margin-top: 15px;
+  margin-bottom: 20px; }
+
+#team .fa:hover {
+  color: #6c7279;
+  border-color: #6c7279; }
+
+#testimonials .carousel-indicators {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateX(-50%); }
+  #testimonials .carousel-indicators li {
+    margin-right: 5px; }
+
+#testimonials .slide-photo {
+  height: 300px;
+  padding: 0; }
+
+#testimonials .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.3); }
+  #testimonials .carousel-caption p {
+    font-size: 22px;
+    font-family: "Cardo", serif;
+    font-style: italic; }
+  #testimonials .carousel-caption h5 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2d3033;
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    color: #fff; }
+
+#testimonials .quotes {
+  display: none;
+  padding: 5%;
+  background-color: #533549;
+  color: #fff;
+  height: 100%; }
+  #testimonials .quotes blockquote {
+    border: none;
+    font-family: "Cardo", serif;
+    font-style: italic; }
+    #testimonials .quotes blockquote cite {
+      font-size: 13px;
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
+      font-weight: bold; }
+
+#download {
+  max-height: 350px;
+  padding-top: 10%;
+  padding-bottom: 10%; }
+  #download h3 {
+    color: #2d3033;
+    margin: 0; }
+  #download h5 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2d3033;
+    font-size: 13px;
+    margin-top: 4%; }
+  #download .btn-lg {
+    width: 280px;
+    height: 46px;
+    margin-top: 20px; }
+
+.contact {
+  background-color: #393d63;
+  padding-top: 3%;
+  padding-bottom: 5%; }
+  .contact h5 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2d3033;
+    font-size: 14px;
+    color: #fff; }
+  .contact .fa {
+    border-radius: 2px;
+    border-width: 2px; }
+    .contact .fa:hover {
+      color: #e74545;
+      border-color: #e74545; }
+  .contact p {
+    font-weight: 300; }
+
+footer {
+  background-color: #313353;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: gray; }
+  footer p {
+    margin-bottom: 0; }
+  footer .fa {
+    color: #e74545; }
+  footer .author {
+    color: #fff; }
+
+@media (min-width: 768px) {
+  .jumbotron header h1 {
+    font-size: 40px; }
+  .jumbotron header p {
+    font-size: 22px; }
+  #team {
+    padding-top: 5%; }
+    #team .text-center {
+      text-align: left; }
+    #team .person {
+      margin-top: 0; }
+      #team .person .photo {
+        height: 300px;
+        width: 100%; }
+  #testimonials .slide-photo {
+    height: 400px; }
+  #testimonials .quotes blockquote {
+    font-size: 24px; } }
+
+@media (min-width: 992px) {
+  .jumbotron {
+    height: 700px; }
+    .jumbotron header h1 {
+      font-size: 65px; }
+  #team {
+    padding-bottom: 5%; }
+    #team .person {
+      margin: 0; }
+  #testimonials .slide-photo {
+    height: 500px; }
+  #testimonials .carousel-indicators {
+    left: 75%;
+    bottom: 15%; }
+  #testimonials .carousel-caption {
+    display: none; }
+  #testimonials .quotes {
+    height: 500px;
+    display: block; }
+    #testimonials .quotes blockquote {
+      font-size: 28px; }
+  #download h5 {
+    margin-top: 2%; } }
+
+@media (min-width: 1200px) {
+  #testimonials .slide-photo {
+    height: 600px; }
+  #testimonials .carousel-indicators {
+    bottom: 15%; }
+  #testimonials .quotes {
+    height: 600px; }
+    #testimonials .quotes blockquote {
+      font-size: 36px; }
+  #download {
+    padding-top: 5%;
+    padding-bottom: 5%; }
+    #download h2 {
+      font-size: 28px; } }
+
+/*# sourceMappingURL=style.css.map */
